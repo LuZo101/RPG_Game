@@ -16,11 +16,17 @@ private:
 public:
     // Konstruktor
     Unit(string type, int hp, int moves) : Type(type), HP(hp), Moves(moves) {}
-    ~Unit();
+    virtual ~Unit();
     // Setter & Getter
     string getType() const { return Type; }
     int getHP() const { return HP; }
     int getMoves() const { return Moves; }
+    void setHP(int hp){HP = hp;}
 };
+
+
+Unit::~Unit()
+{
+}
 
 #endif
