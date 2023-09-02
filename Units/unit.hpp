@@ -12,22 +12,15 @@ private:
     string Type;
     int HP;
     int Moves;
-    
-
 
 public:
-    Unit(/* args */);
+    // Konstruktor
+    Unit(string type, int hp, int moves) : Type(type), HP(hp), Moves(moves) {}
     ~Unit();
+    // Setter & Getter
+    string getType() const { return Type; }
+    int getHP() const { return HP; }
+    int getMoves() const { return Moves; }
 };
-
-Unit::Unit(/* args */)
-{
-}
-
-Unit::~Unit()
-{
-}
-
-
 
 #endif
