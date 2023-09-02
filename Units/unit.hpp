@@ -1,44 +1,49 @@
 #ifndef UNIT_HPP
 #define UNIT_HPP
-#include <string>
-#include <iostream>
 
-using namespace std;
+#include <string>
 
 class Weapon
 {
 private:
-    string Name;
-    string Type;
-    int Damage;
+    std::string Name;
+    std::string DistanceType;
+    std::string Type;
+    int BaseDamage;
+    int DamageMultiplier;
 
 public:
-    Weapon(string n, string t, int d) : Name(n), Type(t), Damage(d) {}
-    string getName()const{return Name;}
-    string getType()const{return Type;}
-    int getDamage()const{return Damage;}
+    Weapon(std::string name, std::string distanceType, std::string type, int baseDamage, int damageMultiplier);
+    std::string getName() const;
+    std::string getType() const;
+    int getBaseDamage() const;
+    int getDamageMultiplier() const;
 };
 
 class Unit
 {
 private:
-    string Type;
+    std::string Type;
     int HP;
     int Moves;
     Weapon PrimaryWeapon;
     Weapon SecondaryWeapon;
 
 public:
-    // Konstruktor
-    Unit(string type, int hp, int moves, Weapon& primaryWeapon, Weapon& secondaryWeapon);
-    virtual ~Unit();
-    // Setter & Getter
+    Unit(std::string type, int hp, int moves, const Weapon &primaryWeapon, const Weapon &secondaryWeapon);
+    ~Unit();
 
-    string getType() const { return Type; }
-    int getHP() const { return HP; }
-    int getMoves() const { return Moves; }
-    Weapon getPrimaryWeapon()const {return PrimaryWeapon;}
-    Weapon getSecondaryWeapon()const {return SecondaryWeapon;}
+    std::string getType() const;
+    int getHP() const;
+    int getMoves() const;
+    Weapon getPrimaryWeapon() const;
+    Weapon getSecondaryWeapon() const;
+};
+
+class DrakeBurner : public Unit
+{
+public:
+    DrakeBurner();
 };
 
 #endif
