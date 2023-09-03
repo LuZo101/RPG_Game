@@ -48,3 +48,6 @@ build/
 [Bb][Uu][Ii][Ll][Dd]/
 .vscode
 tasks.json
+.vscode/tasks.json
+/.vscode/tasks.json
+.vscode/tasks.json
