@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.27.2)
+
+project(RPG_Game)
+
+add_executable(${PROJECT_NAME} main.cpp)
+
+add_subdirectory(Units)
+
+target_link_libraries(${PROJECT_NAME} units)
