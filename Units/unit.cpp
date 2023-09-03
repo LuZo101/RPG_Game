@@ -1,5 +1,7 @@
 #include "unit.hpp"
 
+
+
 Weapon::Weapon(std::string name, std::string distanceType, std::string type, int baseDamage, int damageMultiplier)
     : Name(name), DistanceType(distanceType), Type(type), BaseDamage(baseDamage), DamageMultiplier(damageMultiplier) {}
 
