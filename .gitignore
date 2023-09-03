@@ -31,24 +31,27 @@
 *.out
 *.app
 
-
+# CMake generated files
 CMakeLists.txt.user
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
+CMakeFiles/
+CMakeScripts/
+Testing/
 Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps
+_deps/
+
+# Build directories
 out/
 build/
 [Bb][Uu][Ii][Ll][Dd]/
-.vscode
-tasks.json
-.vscode/tasks.json
-/.vscode/tasks.json
-.vscode/tasks.json
-/.vscode/*.json
+
+# VS Code configuration
+.vscode/
+.vscode/*
+
+!.vscode/settings.json   # This excludes settings.json from being ignored if you want to share it
+!.vscode/keybindings.json   # Same for keybindings.json
