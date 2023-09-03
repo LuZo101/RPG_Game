@@ -55,3 +55,4 @@ build/
 
 !.vscode/settings.json   # This excludes settings.json from being ignored if you want to share it
 !.vscode/keybindings.json   # Same for keybindings.json
+!.vscode/*.json
