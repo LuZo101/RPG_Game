@@ -45,5 +45,14 @@ class DrakeBurner : public Unit
 public:
     DrakeBurner();
 };
-
+class DwarvishFighter : public Unit
+{
+public:
+    DwarvishFighter();
+};
+class ElvishArcher : public Unit
+{
+public:
+    ElvishArcher();
+};
 #endif
