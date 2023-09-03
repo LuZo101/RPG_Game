@@ -21,5 +21,15 @@ Weapon Unit::getSecondaryWeapon() const { return SecondaryWeapon; }
 
 DrakeBurner::DrakeBurner()
     : Unit("Drake Burner", 42, 5,
-           Weapon("Claws", "Melee", "Blade", 7, 2),
+           Weapon("Claws", "melee", "Blade", 7, 2),
            Weapon("Fire Breath", "Ranged", "Fire", 6, 4)) {}
+
+DwarvishFighter::DwarvishFighter()
+    : Unit("Dwarvish Fighter", 38, 4,
+           Weapon("Axe", "melee", "blade", 5, 2),
+           Weapon("hammer", "melee", "impact", 8, 21)) {}
+
+ElvishArcher::ElvishArcher()
+    : Unit("Elvisch Archer", 29, 6,
+           Weapon("Sword", "melee", "blade", 5, 2),
+           Weapon("Bow", "ranged", "pierce", 5, 4)) {}
