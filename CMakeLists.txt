@@ -11,6 +11,7 @@ include(${wxWidgets_USE_FILE})
 # Add your source files
 set(SOURCE_FILES
     main.cpp
+    wxFrames/mainframe.cpp
     # ... any other source files
 )
 
@@ -20,6 +21,7 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
 
 add_subdirectory(Units)
+add_subdirectory(wxFrames)
 
 # Assuming the "units" target is defined within the Units subdirectory
 target_link_libraries(${PROJECT_NAME} units)
